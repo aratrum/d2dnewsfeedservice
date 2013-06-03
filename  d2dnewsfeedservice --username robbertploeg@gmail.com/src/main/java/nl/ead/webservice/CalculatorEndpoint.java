@@ -1,14 +1,10 @@
 package nl.ead.webservice;
 
-import org.apache.xmlrpc.client.XmlRpcClient;
-import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
 import org.springframework.oxm.Marshaller;
 import org.springframework.oxm.Unmarshaller;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 
-import java.net.URL;
-import java.util.HashMap;
 import java.util.List;
 
 @Endpoint
