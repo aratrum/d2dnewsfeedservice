@@ -31,6 +31,7 @@ public class ServiceCaller {
      * @return
      */
     public String connectToFacebook(String username) {
+        System.out.println("(--- FACEBOOK API CALL ---)");
         String generic_error = "";
         String url = "http://graph.facebook.com/";
         String fields = "?fields=id,name,locale";
@@ -73,7 +74,7 @@ public class ServiceCaller {
      * @return
      */
     public String connectToArticleAPI(String interest) {
-
+        System.out.println("(--- ARTICLE API CALL ---)");
         String generic_error = "";
        // String response =""; //ARTICLEAPI_URL;
         String url = "http://www.diffbot.com/api/article?token=344e65eee509748803505554ac1615fe&url=";
