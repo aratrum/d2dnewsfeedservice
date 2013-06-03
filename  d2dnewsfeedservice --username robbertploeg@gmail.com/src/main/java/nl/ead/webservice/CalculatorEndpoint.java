@@ -1,5 +1,6 @@
 package nl.ead.webservice;
 
+import nl.ead.webservice.service.ServiceCaller;
 import org.springframework.oxm.Marshaller;
 import org.springframework.oxm.Unmarshaller;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
@@ -39,8 +40,12 @@ public class CalculatorEndpoint {
             }
         }
 
+        ServiceCaller svc = new ServiceCaller();
+        String hallo = svc.connectToFacebook("Robbert%20Ploeg");
+        System.out.println(hallo);
+
         CalculateResult result = new CalculateResult();
-        result.setMessage("Response YEAH");
+        result.setMessage("Response Sent");
         result.setValue(retValue);
         CalculateResponse resp = new CalculateResponse();
         resp.setResult(result);
