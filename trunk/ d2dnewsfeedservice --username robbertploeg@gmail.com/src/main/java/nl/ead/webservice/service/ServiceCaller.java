@@ -76,11 +76,11 @@ public class ServiceCaller {
 
         String generic_error = "";
        // String response =""; //ARTICLEAPI_URL;
-        String beginningOfReqeustArticels = "http://www.diffbot.com/api/article?token=344e65eee509748803505554ac1615fe&url=";
-        String article = "http://well.blogs.nytimes.com/2013/05/31/new-tricks-for-old-grains/?ref=health";
+        String url = "http://www.diffbot.com/api/article?token=344e65eee509748803505554ac1615fe&url=";
+        String article_url = "http://well.blogs.nytimes.com/2013/05/31/new-tricks-for-old-grains/?ref=health";
 
         HttpClient client = new HttpClient();
-        HttpMethod method = new GetMethod(beginningOfReqeustArticels + article);
+        HttpMethod method = new GetMethod(url + article_url);
 
         try {
             client.executeMethod(method);
