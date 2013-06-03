@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_httpclient_commons_httpclient_3_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calculator.iml" afterPath="$PROJECT_DIR$/Calculator.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/CalculatorEndpoint.java" afterPath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/CalculatorEndpoint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Calculator_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Calculator_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java" afterPath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Calculator.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/ArticleParser.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370197723519" ignored="false" />
-    <file path="/Dummy.txt" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370243968792" ignored="false" />
-    <file path="/ServiceCaller.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370247501426" ignored="false" />
+    <file path="/Dummy.txt" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370247694007" ignored="false" />
+    <file path="/ServiceCaller.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370248991843" ignored="false" />
     <file path="/CalculatorEndpoint.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370245657774" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +75,7 @@
       <file leaf-file-name="CalculatorEndpoint.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/CalculatorEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="24" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.0">
+            <state line="43" column="58" selection-start="1830" selection-end="1830" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,20 +86,11 @@
       <file leaf-file-name="ServiceCaller.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="40" selection-start="1717" selection-end="1717" vertical-scroll-proportion="1.1164384">
+            <state line="31" column="46" selection-start="758" selection-end="758" vertical-scroll-proportion="0.1849315">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#connectToArticleAPI#0;class#ServiceCaller#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="0" selection-start="3695" selection-end="3695" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -690,7 +676,11 @@
       <created>1370243985151</created>
       <updated>1370243985151</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added connection to the Graph.facebook.com API&#10;TO DO: send the right info over the get">
+      <created>1370247708102</created>
+      <updated>1370247708102</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -767,7 +757,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the .war&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added connection to the Graph.facebook.com API&#10;TO DO: send the right info over the get" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -783,6 +773,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Refactor" />
     <MESSAGE value="added the .war&#10;" />
+    <MESSAGE value="Added connection to the Graph.facebook.com API&#10;TO DO: send the right info over the get" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -869,25 +860,25 @@
         <state line="2" column="34" selection-start="102" selection-end="102" vertical-scroll-proportion="0.040380046" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="0" selection-start="3695" selection-end="3695" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/CalculatorEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="24" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.0">
+        <state line="43" column="58" selection-start="1830" selection-end="1830" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="0" selection-start="3695" selection-end="3695" vertical-scroll-proportion="1.6849315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="40" selection-start="1717" selection-end="1717" vertical-scroll-proportion="1.1164384">
+        <state line="31" column="46" selection-start="758" selection-end="758" vertical-scroll-proportion="0.1849315">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#connectToArticleAPI#0;class#ServiceCaller#0" expanded="true" />

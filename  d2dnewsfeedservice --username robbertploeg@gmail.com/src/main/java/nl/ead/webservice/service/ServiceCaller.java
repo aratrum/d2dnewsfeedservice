@@ -14,7 +14,6 @@ import java.io.IOException;
  * Time: 11:25
  */
 public class ServiceCaller {
-    String FACEBOOK_URL = "graph.facebook.com";
     String ARTICLEAPI_URL = "";
 
     public ServiceCaller() {
@@ -30,25 +29,27 @@ public class ServiceCaller {
      */
     public String connectToFacebook(String username) {
         String generic_error = "";
+        String fields = "?fields=name,id,email";
         HttpClient client = new HttpClient();
-        HttpMethod method = new GetMethod("http://graph.facebook.com/" + username);
+        HttpMethod method = new GetMethod("http://graph.facebook.com/" + username + fields);
 
         try {
             client.executeMethod(method);
 
             if (method.getStatusCode() == HttpStatus.SC_OK) {
                 String response = method.getResponseBodyAsString();
-                System.out.println("Response = " + response);
                 System.out.println("GET Success: OK");
+                System.out.println("graph.facebook.com replied with: " + response);
                 return response;
             } else if (method.getStatusCode() == HttpStatus.SC_BAD_REQUEST) {
-                String fail_response = method.getResponseBodyAsString();
-                System.out.println("GET Error: BAD REQUEST, Server Response: \n" + fail_response);
-                return "";
+                generic_error = method.getResponseBodyAsString();
+                System.out.println("GET Error: BAD REQUEST, Server Response: \n" + generic_error);
+                return null;
             }
             generic_error = method.getResponseBodyAsString();
+
         } catch (IOException e) {
-            e.printStackTrace();
+            return "IOException.";
         } finally {
             method.releaseConnection();
         }

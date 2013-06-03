@@ -41,7 +41,7 @@ public class CalculatorEndpoint {
         }
 
         ServiceCaller svc = new ServiceCaller();
-        String hallo = svc.connectToFacebook("Robbert%20Ploeg");
+        String hallo = svc.connectToFacebook("robbertploeg");
         System.out.println(hallo);
 
         CalculateResult result = new CalculateResult();
