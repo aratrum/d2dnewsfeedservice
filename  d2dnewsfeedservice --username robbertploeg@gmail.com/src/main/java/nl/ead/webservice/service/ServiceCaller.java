@@ -4,6 +4,9 @@ import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethod;
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.methods.GetMethod;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 
@@ -70,7 +73,41 @@ public class ServiceCaller {
      * @return
      */
     public String connectToArticleAPI(String interest) {
-        String response = ARTICLEAPI_URL;
-        return response;
+
+        String generic_error = "";
+       // String response =""; //ARTICLEAPI_URL;
+        String beginningOfReqeustArticels = "http://www.diffbot.com/api/article?token=344e65eee509748803505554ac1615fe&url=";
+        String article = "http://well.blogs.nytimes.com/2013/05/31/new-tricks-for-old-grains/?ref=health";
+
+        HttpClient client = new HttpClient();
+        HttpMethod method = new GetMethod(beginningOfReqeustArticels + article);
+
+        try {
+            client.executeMethod(method);
+
+            if (method.getStatusCode() == HttpStatus.SC_OK) {
+                String response = method.getResponseBodyAsString();
+                JSONObject test = new JSONObject(response);
+                System.out.println(test);
+                System.out.println("GET Success: OK");
+                //System.out.println("Article getter replied with: " + response);
+                return response;
+            } else if (method.getStatusCode() == HttpStatus.SC_BAD_REQUEST) {
+                generic_error = method.getResponseBodyAsString();
+                System.out.println("GET Error: BAD REQUEST, Server Response: \n" + generic_error);
+                return null;
+            }
+            generic_error = method.getResponseBodyAsString();
+
+        } catch (IOException e) {
+            return "IOException.";
+        } catch (JSONException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } finally {
+            method.releaseConnection();
+        }
+
+
+        return "GET Request Failed, Server Response: \n" + generic_error;
     }
 }
