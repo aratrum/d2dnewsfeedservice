@@ -44,6 +44,9 @@ public class CalculatorEndpoint {
         String hallo = svc.connectToFacebook("robbertploeg");
         System.out.println(hallo);
 
+        String harro = svc.connectToArticleAPI("Harro");
+        System.out.println(harro);
+
         CalculateResult result = new CalculateResult();
         result.setMessage("Response Sent");
         result.setValue(retValue);
