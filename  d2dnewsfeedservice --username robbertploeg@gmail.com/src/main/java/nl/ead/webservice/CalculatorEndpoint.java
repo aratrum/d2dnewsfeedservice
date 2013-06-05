@@ -6,6 +6,7 @@ import org.springframework.oxm.Unmarshaller;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Endpoint
@@ -41,11 +42,14 @@ public class CalculatorEndpoint {
         }
 
         ServiceCaller svc = new ServiceCaller();
-        String hallo = svc.connectToFacebook("robbertploeg");
-        System.out.println(hallo);
+        ArrayList<String> interests;
+        interests = svc.connectToFacebook("robbertploeg");
+        for(String interest: interests){
+            System.out.print(interest + ", ");
+        }
 
-        String harro = svc.connectToArticleAPI("Harro");
-        System.out.println(harro);
+        //String harro = svc.connectToArticleAPI("Harro");
+        //System.out.println(harro);
 
         CalculateResult result = new CalculateResult();
         result.setMessage("Response Sent");
