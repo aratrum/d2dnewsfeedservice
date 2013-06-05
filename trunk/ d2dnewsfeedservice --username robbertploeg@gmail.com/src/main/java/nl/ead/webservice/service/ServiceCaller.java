@@ -3,6 +3,7 @@ package nl.ead.webservice.service;
 import com.restfb.Connection;
 import com.restfb.DefaultFacebookClient;
 import com.restfb.FacebookClient;
+import com.restfb.exception.FacebookOAuthException;
 import com.restfb.types.User;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethod;
@@ -35,26 +36,32 @@ public class ServiceCaller {
         try {
             User user_data = client.fetchObject(username, User.class);
             System.out.println("Name: " + user_data.getLastName() + ", " + user_data.getFirstName());
-        } catch (NullPointerException e) {
-            System.out.println("Facebook API did not return anything. Access Token is probably missing or has to be updated.");
-        }
+            // returns JSONObject collection
+            Connection<String> user_connections = client.fetchConnection(username + "/likes", String.class);
 
-        // returns JSONObject collection
-        Connection<String> user_connections = client.fetchConnection(username + "/likes", String.class);
-        interests = new ArrayList<String>();
+            interests = new ArrayList<String>();
 
-        for (List<String> users : user_connections) {
-            for (String like : users) {
-                try {
-                    JSONObject json = new JSONObject(like);
-                    interests.add(json.getString("category"));
-                } catch (JSONException e) {
-                    System.out.println("JSON EXCEPTION");
+            for (List<String> users : user_connections) {
+                for (String like : users) {
+                    try {
+                        JSONObject json = new JSONObject(like);
+                        interests.add(json.getString("category"));
+                    } catch (JSONException e) {
+                        System.out.println("JSON EXCEPTION");
+                    }
                 }
             }
-        }
-        return interests;
+            return interests;
 
+        } catch (NullPointerException e) {
+            System.out.println("Facebook API did not return anything." +
+                    "\nException message: '" + e.getMessage() + "'");
+        } catch (FacebookOAuthException e) {
+            System.out.println("Facebook API returned an Exception." +
+                    "\nException message: '" + e.getMessage() + "'");
+        }
+
+        return null;
     }
 
     public String connectToArticleAPI(String interest) {

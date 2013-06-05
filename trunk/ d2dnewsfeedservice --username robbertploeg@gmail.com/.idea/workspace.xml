@@ -9,9 +9,9 @@
     <ignored path="Calculator.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/ArticleParser.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370437547234" ignored="false" />
-    <file path="/Dummy.txt" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370438725608" ignored="false" />
-    <file path="/ServiceCaller.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370439140215" ignored="false" />
-    <file path="/CalculatorEndpoint.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370439062809" ignored="false" />
+    <file path="/Dummy.txt" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370439392236" ignored="false" />
+    <file path="/ServiceCaller.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370440042567" ignored="false" />
+    <file path="/CalculatorEndpoint.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370440132360" ignored="false" />
     <file path="/InterestParser.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370438535154" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +76,7 @@
       <file leaf-file-name="CalculatorEndpoint.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/CalculatorEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="57" selection-start="2265" selection-end="2265" vertical-scroll-proportion="0.0">
+            <state line="50" column="63" selection-start="2094" selection-end="2094" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -85,7 +85,7 @@
       <file leaf-file-name="ServiceCaller.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="15" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.6873563">
+            <state line="58" column="75" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.64827585">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -776,7 +776,11 @@
       <created>1370438741109</created>
       <updated>1370438741109</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="rewrote try catch at servicecaller&#10;">
+      <created>1370439402103</created>
+      <updated>1370439402103</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -853,7 +857,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added implementation of interest_parser and interests" />
+    <option name="LAST_COMMIT_MESSAGE" value="rewrote try catch at servicecaller&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -874,6 +878,7 @@
     <MESSAGE value="changed the article caller" />
     <MESSAGE value="added a working implementation of the restfb API. Connection is successful but a ACCESS_TOKEN is still needed for likes" />
     <MESSAGE value="added implementation of interest_parser and interests" />
+    <MESSAGE value="rewrote try catch at servicecaller&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -984,14 +989,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/CalculatorEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="57" selection-start="2265" selection-end="2265" vertical-scroll-proportion="0.0">
+        <state line="50" column="63" selection-start="2094" selection-end="2094" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="15" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.6873563">
+        <state line="58" column="75" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.64827585">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

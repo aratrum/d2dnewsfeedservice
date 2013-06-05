@@ -54,6 +54,7 @@ public class CalculatorEndpoint {
             System.out.print(ist.getName() + ", ");
         }
 
+
         //String harro = svc.connectToArticleAPI("Harro");
         //System.out.println(harro);
 
