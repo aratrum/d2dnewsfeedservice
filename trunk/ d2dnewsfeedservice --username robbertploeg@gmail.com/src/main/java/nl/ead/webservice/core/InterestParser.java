@@ -22,6 +22,23 @@ public class InterestParser {
             Interest its = new Interest(name);
             interestList.add(its);
         }
-        return interestList;
+        return removeDuplicates(interestList);
+    }
+
+    public ArrayList<Interest> removeDuplicates(ArrayList<Interest> input) {
+
+        int size = input.size();
+
+        for (int i = 0; i < size - 1; i++) {
+            for (int j = i + 1; j < size; j++) {
+                if (!input.get(j).getName().equals(input.get(i).getName()))
+                    continue;
+                input.remove(j);
+                j--;
+                size--;
+            }
+        }
+
+        return input;
     }
 }
