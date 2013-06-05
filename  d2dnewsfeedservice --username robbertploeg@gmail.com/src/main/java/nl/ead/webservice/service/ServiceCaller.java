@@ -3,7 +3,6 @@ package nl.ead.webservice.service;
 import com.restfb.Connection;
 import com.restfb.DefaultFacebookClient;
 import com.restfb.FacebookClient;
-import com.restfb.types.Page;
 import com.restfb.types.User;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethod;
@@ -31,21 +30,21 @@ public class ServiceCaller {
 
     public ArrayList<String> connectToFacebook(String username) {
         ArrayList<String> interests;
-        System.out.println("(--- FACEBOOK API CALL---)");
-
         FacebookClient client = new DefaultFacebookClient(ACCESS_TOKEN);
-        User user_data = client.fetchObject(username, User.class);
 
-        System.out.println("Name: " + user_data.getLastName() + ", " + user_data.getFirstName()
-                + "\nBirthday: " + user_data.getBirthday()
-                + "\nHometown: "  + user_data.getHometown().getName());
+        try {
+            User user_data = client.fetchObject(username, User.class);
+            System.out.println("Name: " + user_data.getLastName() + ", " + user_data.getFirstName());
+        } catch (NullPointerException e) {
+            System.out.println("Facebook API did not return anything. Access Token is probably missing or has to be updated.");
+        }
 
         // returns JSONObject collection
-        Connection<String> user_connections = client.fetchConnection(username+"/likes", String.class);
+        Connection<String> user_connections = client.fetchConnection(username + "/likes", String.class);
         interests = new ArrayList<String>();
 
-        for (List<String> users : user_connections){
-            for (String like : users){
+        for (List<String> users : user_connections) {
+            for (String like : users) {
                 try {
                     JSONObject json = new JSONObject(like);
                     interests.add(json.getString("category"));
@@ -61,7 +60,7 @@ public class ServiceCaller {
     public String connectToArticleAPI(String interest) {
         System.out.println("(--- ARTICLE API CALL ---)");
         String generic_error = "";
-       // String response =""; //ARTICLEAPI_URL;
+        // String response =""; //ARTICLEAPI_URL;
         String url = "http://www.diffbot.com/api/article?token=344e65eee509748803505554ac1615fe&url=";
         String article_url = "http://well.blogs.nytimes.com/2013/05/31/new-tricks-for-old-grains/?ref=health";
 
