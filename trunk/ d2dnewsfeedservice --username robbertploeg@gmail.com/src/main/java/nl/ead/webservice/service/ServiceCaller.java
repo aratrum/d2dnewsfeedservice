@@ -1,14 +1,20 @@
 package nl.ead.webservice.service;
 
+import com.restfb.Connection;
+import com.restfb.DefaultFacebookClient;
+import com.restfb.FacebookClient;
+import com.restfb.types.Page;
+import com.restfb.types.User;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethod;
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.methods.GetMethod;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -17,62 +23,41 @@ import java.io.IOException;
  * Time: 11:25
  */
 public class ServiceCaller {
-    String ARTICLEAPI_URL = "";
+    String ACCESS_TOKEN = "CAACEdEose0cBACZCH4BAbwJPZAbiKvdFdSEyo7pkrLikZBEwp8Ldl0ZAapoCwcHuXMYc4yDKjwWzZCCQzQ9GRIGaGg6tCECOVsfKb8QKr1Oy7ZAlSOZAxMFvwNajKEgMpuuOeIvaawog9LypZCRiZBNkZCq0SimzjAZC9iW0ZCemL3otBwZDZD";
 
     public ServiceCaller() {
 
     }
 
-    /**
-     * This method uses the FACEBOOK_URL to connect to the facebookAPI.
-     * It needs the facebook username to get the correct data.
-     *
-     * @param username
-     * @return
-     */
-    public String connectToFacebook(String username) {
-        System.out.println("(--- FACEBOOK API CALL ---)");
-        String generic_error = "";
-        String url = "http://graph.facebook.com/";
-        String fields = "?fields=id,name,locale";
-        HttpClient client = new HttpClient();
+    public ArrayList<String> connectToFacebook(String username) {
+        ArrayList<String> interests;
+        System.out.println("(--- FACEBOOK API CALL---)");
 
-        // example = http://graph.facebook.com/robbertploeg?fields=id,name -- returns JSON with id + name
-        HttpMethod getRequest = new GetMethod(url + username + fields);
+        FacebookClient client = new DefaultFacebookClient(ACCESS_TOKEN);
+        User user_data = client.fetchObject(username, User.class);
 
-        try {
-            client.executeMethod(getRequest);
+        System.out.println("Name: " + user_data.getLastName() + ", " + user_data.getFirstName()
+                + "\nBirthday: " + user_data.getBirthday()
+                + "\nHometown: "  + user_data.getHometown().getName());
 
-            if (getRequest.getStatusCode() == HttpStatus.SC_OK) {
-                String response = getRequest.getResponseBodyAsString();
-                System.out.println("["+System.currentTimeMillis()+"]"+" GET Success: OK");
-                System.out.println("graph.facebook.com replied with: " + response);
-                return response;
-            } else if (getRequest.getStatusCode() == HttpStatus.SC_BAD_REQUEST) {
-                generic_error = getRequest.getResponseBodyAsString();
-                System.out.println("GET Error: BAD REQUEST, Server Response: \n" + generic_error);
-                return null;
+
+        Connection<String> user_connections = client.fetchConnection(username+"/likes", String.class);
+        interests = new ArrayList<String>();
+
+        for (List<String> users : user_connections){
+            for (String like : users){
+                try {
+                    JSONObject json = new JSONObject(like);
+                    interests.add(json.getString("category"));
+                } catch (JSONException e) {
+                    System.out.println("JSON EXCEPTION");
+                }
             }
-            generic_error = getRequest.getResponseBodyAsString();
-
-        } catch (IOException e) {
-            return "IOException.";
-        } finally {
-            getRequest.releaseConnection();
         }
+        return interests;
 
-
-        return "GET Request Failed, Server Response: \n" + generic_error;
     }
 
-
-    /**
-     * This method uses the ARTICLEAPI_UR to connect to the ArticleAPI.
-     * It needs the interest name to get the correct data.
-     *
-     * @param interest
-     * @return
-     */
     public String connectToArticleAPI(String interest) {
         System.out.println("(--- ARTICLE API CALL ---)");
         String generic_error = "";
