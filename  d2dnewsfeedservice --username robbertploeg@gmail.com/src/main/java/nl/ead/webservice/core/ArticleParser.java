@@ -16,6 +16,7 @@ public class ArticleParser {
 
     public ArrayList<Article> processArticles(String input){
         ArrayList<Article> articleList = null;
+
         return articleList;
     }
 }

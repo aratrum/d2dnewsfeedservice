@@ -1,6 +1,9 @@
 package nl.ead.webservice.core;
+
+import nl.ead.webservice.entity.Article;
+import nl.ead.webservice.entity.Interest;
+
 import java.util.ArrayList;
-import nl.ead.webservice.entity.*;
 
 /**
  * User: Robbert
@@ -9,12 +12,16 @@ import nl.ead.webservice.entity.*;
  */
 public class InterestParser {
 
-    public InterestParser(){
+    public InterestParser() {
 
     }
 
-    public ArrayList<Interest> processInterests(String input){
-        ArrayList<Interest> interestList = null;
-          return interestList;
+    public ArrayList<Interest> processInterests(ArrayList<String> input) {
+        ArrayList<Interest> interestList = new ArrayList<Interest>();
+        for (String name : input) {
+            Interest its = new Interest(name);
+            interestList.add(its);
+        }
+        return interestList;
     }
 }
