@@ -54,9 +54,13 @@ public class CalculatorEndpoint {
             System.out.print(ist.getName() + ", ");
         }
 
+        ArrayList<Interest> offline_test_interests = new ArrayList<Interest>();
+        offline_test_interests.add(new Interest("Computers"));
+        offline_test_interests.add(new Interest("Games"));
 
-        //String harro = svc.connectToArticleAPI("Harro");
-        //System.out.println(harro);
+        // use the offline interest_list if access token is no longer valid. will be fixed.
+        String harro = svc.connectToArticleAPI("Harro");
+        System.out.println(harro);
 
         CalculateResult result = new CalculateResult();
         result.setMessage("Response Sent");
