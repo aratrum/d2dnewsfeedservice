@@ -1,6 +1,5 @@
 package nl.ead.webservice;
 
-import nl.ead.webservice.core.ArticleParser;
 import nl.ead.webservice.core.InterestParser;
 import nl.ead.webservice.entity.Interest;
 import nl.ead.webservice.service.ServiceCaller;
@@ -51,8 +50,7 @@ public class CalculatorEndpoint {
 
         facebook_response = svc.connectToFacebook("robbertploeg");
         parsed_interests = inp.processInterests(facebook_response);
-
-        for(Interest ist: parsed_interests){
+        for (Interest ist : parsed_interests) {
             System.out.print(ist.getName() + ", ");
         }
 
