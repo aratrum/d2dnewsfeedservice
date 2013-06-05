@@ -23,7 +23,7 @@ import java.util.List;
  * Time: 11:25
  */
 public class ServiceCaller {
-    String ACCESS_TOKEN = "CAACEdEose0cBACZCH4BAbwJPZAbiKvdFdSEyo7pkrLikZBEwp8Ldl0ZAapoCwcHuXMYc4yDKjwWzZCCQzQ9GRIGaGg6tCECOVsfKb8QKr1Oy7ZAlSOZAxMFvwNajKEgMpuuOeIvaawog9LypZCRiZBNkZCq0SimzjAZC9iW0ZCemL3otBwZDZD";
+    String ACCESS_TOKEN = "CAACEdEose0cBAK55jHjz86448JWZBuNaJeqZCS4UiQOVt6BnvvkUZABf3fMUPHcZC3pz9FqAWhiyyCTeoEAAx31Pw3VczDSHE1wHZCZA2hhPgrMt8MAa3CYICpqq8Rl0y3XT4eCnlL8JZCRvta0dI4OIOZCY72AxZCCN1Ev1S5jdfZAAZDZD";
 
     public ServiceCaller() {
 
@@ -40,7 +40,7 @@ public class ServiceCaller {
                 + "\nBirthday: " + user_data.getBirthday()
                 + "\nHometown: "  + user_data.getHometown().getName());
 
-
+        // returns JSONObject collection
         Connection<String> user_connections = client.fetchConnection(username+"/likes", String.class);
         interests = new ArrayList<String>();
 

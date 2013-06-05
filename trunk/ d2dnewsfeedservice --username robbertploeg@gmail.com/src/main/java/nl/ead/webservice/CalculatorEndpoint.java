@@ -1,5 +1,8 @@
 package nl.ead.webservice;
 
+import nl.ead.webservice.core.ArticleParser;
+import nl.ead.webservice.core.InterestParser;
+import nl.ead.webservice.entity.Interest;
 import nl.ead.webservice.service.ServiceCaller;
 import org.springframework.oxm.Marshaller;
 import org.springframework.oxm.Unmarshaller;
@@ -42,10 +45,15 @@ public class CalculatorEndpoint {
         }
 
         ServiceCaller svc = new ServiceCaller();
-        ArrayList<String> interests;
-        interests = svc.connectToFacebook("robbertploeg");
-        for(String interest: interests){
-            System.out.print(interest + ", ");
+        InterestParser inp = new InterestParser();
+        ArrayList<String> facebook_response;
+        ArrayList<Interest> parsed_interests;
+
+        facebook_response = svc.connectToFacebook("robbertploeg");
+        parsed_interests = inp.processInterests(facebook_response);
+
+        for(Interest ist: parsed_interests){
+            System.out.print(ist.getName() + ", ");
         }
 
         //String harro = svc.connectToArticleAPI("Harro");
