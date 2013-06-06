@@ -66,6 +66,8 @@
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.json:json:20090211" level="project" />
     <orderEntry type="library" name="Maven: com.restfb:restfb:1.6.12" level="project" />
+    <orderEntry type="library" name="Maven: org.jsoup:jsoup:0.2.2" level="project" />
+    <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.4" level="project" />
   </component>
 </module>
 
