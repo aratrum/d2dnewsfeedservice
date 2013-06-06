@@ -48,11 +48,11 @@ public class CalculatorEndpoint {
         ArrayList<String> facebook_response;
         ArrayList<Interest> parsed_interests;
 
-        //facebook_response = svc.connectToFacebook("robbertploeg");
-       // parsed_interests = inp.processInterests(facebook_response);
-       // for (Interest ist : parsed_interests) {
-       //     System.out.print(ist.getName() + ", ");
-       // }
+        facebook_response = svc.connectToFacebook("robbertploeg");
+        parsed_interests = inp.processInterests(facebook_response);
+        for (Interest ist : parsed_interests) {
+            System.out.print(ist.getName() + ", ");
+        }
 
         ArrayList<Interest> offline_test_interests = new ArrayList<Interest>();
         offline_test_interests.add(new Interest("Computers"));
