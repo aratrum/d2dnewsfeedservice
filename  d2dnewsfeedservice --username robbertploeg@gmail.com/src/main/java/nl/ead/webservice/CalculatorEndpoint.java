@@ -48,18 +48,18 @@ public class CalculatorEndpoint {
         ArrayList<String> facebook_response;
         ArrayList<Interest> parsed_interests;
 
-        facebook_response = svc.connectToFacebook("robbertploeg");
-        parsed_interests = inp.processInterests(facebook_response);
-        for (Interest ist : parsed_interests) {
-            System.out.print(ist.getName() + ", ");
-        }
+        //facebook_response = svc.connectToFacebook("robbertploeg");
+       // parsed_interests = inp.processInterests(facebook_response);
+       // for (Interest ist : parsed_interests) {
+       //     System.out.print(ist.getName() + ", ");
+       // }
 
         ArrayList<Interest> offline_test_interests = new ArrayList<Interest>();
         offline_test_interests.add(new Interest("Computers"));
         offline_test_interests.add(new Interest("Games"));
 
         // use the offline interest_list if access token is no longer valid. will be fixed.
-        String harro = svc.connectToArticleAPI("Harro");
+        String harro = svc.connectToArticleAPI(offline_test_interests);
         System.out.println(harro);
 
         CalculateResult result = new CalculateResult();

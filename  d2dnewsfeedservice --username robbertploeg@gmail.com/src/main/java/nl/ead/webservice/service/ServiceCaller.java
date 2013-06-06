@@ -5,6 +5,7 @@ import com.restfb.DefaultFacebookClient;
 import com.restfb.FacebookClient;
 import com.restfb.exception.FacebookOAuthException;
 import com.restfb.types.User;
+import nl.ead.webservice.entity.Interest;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethod;
 import org.apache.commons.httpclient.HttpStatus;
@@ -64,23 +65,31 @@ public class ServiceCaller {
         return null;
     }
 
-    public String connectToArticleAPI(String interest) {
+    public String connectToArticleAPI(ArrayList<Interest> interest) {
         System.out.println("(--- ARTICLE API CALL ---)");
+        /*for(int i = 0; i < interest.size(); i++)
+        {
+            Interest item = interest.get(i);
+            System.out.println("Item " + i + " : " + item.getName());
+        }*/
         String generic_error = "";
         // String response =""; //ARTICLEAPI_URL;
-        String url = "http://www.diffbot.com/api/article?token=344e65eee509748803505554ac1615fe&url=";
-        String article_url = "http://well.blogs.nytimes.com/2013/05/31/new-tricks-for-old-grains/?ref=health";
+        String getArticleUrl = "http://www.diffbot.com/api/article?token=344e65eee509748803505554ac1615fe&url=";
+        String article_url = "";
+        String beginningSearchString = "http://nos.nl/zoeken/?s=";
+        String endSearchString = "";
 
+        Interest item = interest.get(0);
         HttpClient client = new HttpClient();
-        HttpMethod method = new GetMethod(url + article_url);
+        HttpMethod method = new GetMethod(beginningSearchString + item.getName() + endSearchString);
 
         try {
             client.executeMethod(method);
 
             if (method.getStatusCode() == HttpStatus.SC_OK) {
                 String response = method.getResponseBodyAsString();
-                JSONObject test = new JSONObject(response);
-                System.out.println(test);
+                //JSONObject test = new JSONObject(response);
+                System.out.println(response);
                 System.out.println("GET Success: OK");
                 //System.out.println("Article getter replied with: " + response);
                 return response;
@@ -93,9 +102,10 @@ public class ServiceCaller {
 
         } catch (IOException e) {
             return "IOException.";
-        } catch (JSONException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } finally {
+        } //catch (JSONException e) {
+           // e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        //}
+    finally {
             method.releaseConnection();
         }
 
