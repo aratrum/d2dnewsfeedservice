@@ -9,8 +9,8 @@ import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 
 import java.util.ArrayList;
-import java.util.List;
 
+@SuppressWarnings({"unchecked", "deprecation", "unused"})
 @Endpoint
 public class NewsfeedEndpoint {
     private Marshaller marshaller;
@@ -21,7 +21,6 @@ public class NewsfeedEndpoint {
         this.unmarshaller = unmarshaller;
     }
 
-    @SuppressWarnings({"unchecked", "deprecation"})
     @PayloadRoot(localPart = "NFRequest", namespace = "http://www.han.nl/schemas/messages")
     public NFResponse generateNewsfeed(NFRequest req) {
         // GET THE INPUT FROM THE REQUEST
@@ -46,7 +45,7 @@ public class NewsfeedEndpoint {
 
         // SEARCH ON THE ARTICLE API FOR ARTICLES MATCHING THE INTERESTS
         String harro = svc.connectToArticleAPI(offline_test_interests);
-        System.out.println(harro);
+        //System.out.println(harro);
 
         // PUT THE RESULTS IN THE RESPONSE MESSAGE
         Result result = new Result();
