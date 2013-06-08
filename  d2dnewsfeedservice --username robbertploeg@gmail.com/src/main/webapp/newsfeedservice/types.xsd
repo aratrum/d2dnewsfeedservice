@@ -4,32 +4,15 @@
         xmlns:tns="http://www.han.nl/schemas/types"
         elementFormDefault="qualified">
 
-    <complexType name="CalculateResult">
+    <complexType name="Result">
         <all>
-            <element name="value" type="int"/>
             <element name="message" type="string"/>
         </all>
     </complexType>
 
-    <complexType name="CalculateInput">
+    <complexType name="Input">
         <all>
-			<element name="paramlist" type="tns:CalculateParameters" minOccurs="1" maxOccurs="1"/>
-			<element name="operation" type="tns:CalculateOperation" minOccurs="1" maxOccurs="1"/>
+			<element name="name" type="string" minOccurs="1" maxOccurs="1"/>
         </all>
     </complexType>
-
-	<complexType name="CalculateParameters">
-		<sequence>
-			<element name="param" type="int" minOccurs="1" maxOccurs="unbounded"/>		
-		</sequence>
-	</complexType>
-
-    <simpleType name="CalculateOperation">
-        <restriction base="NCName">
-            <enumeration value="add"/>
-            <enumeration value="subtract"/>
-            <enumeration value="multiply"/>
-            <enumeration value="divide"/>
-        </restriction>
-    </simpleType>
 </schema>
