@@ -24,7 +24,7 @@ import java.util.List;
  * Time: 11:25
  */
 public class ServiceCaller {
-    String ACCESS_TOKEN = "CAACEdEose0cBAGJ51hutJTX9h9ApJvegz3T3BsfJbD9jdFOXwEFMeFZBg1zeoaHvyAYzvfvuIZChGog6cS5g1d6kewoD9bI74ATbt4C96S1YpITVtP17e32XLN171PvLBYkMkJ7aEbIc92ZA0Xd9GBDmfym1wQSqpDFAIvTDwZDZD";
+    String ACCESS_TOKEN = "CAACEdEose0cBAAlXhnxkBRZAStZCRlqVR7X9Oyj3QadmgSaPsXpZCcAR9VMlTESKKZBvQikzIb5dHWSfW60ZBNljZADThRWpu0J5tLCAZAk13x8f5l6TCAxeZAHqrUrQuqSO1MOf7yCsg6BEfAwPACALwex4BATE0f8ZD";
 
     public ServiceCaller() {
 

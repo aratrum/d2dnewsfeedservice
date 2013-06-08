@@ -49,6 +49,8 @@
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.2" />
           <element id="library" level="project" name="Maven: org.json:json:20090211" />
           <element id="library" level="project" name="Maven: com.restfb:restfb:1.6.12" />
+          <element id="library" level="project" name="Maven: org.jsoup:jsoup:0.2.2" />
+          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.4" />
         </element>
       </element>
     </root>

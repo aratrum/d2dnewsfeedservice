@@ -37,7 +37,7 @@
                 <configuration>
                     <generatePackage>nl.ead.webservice
                     </generatePackage>
-                    <schemaDirectory>src/main/webapp/calculator
+                    <schemaDirectory>src/main/webapp/newsfeedservice
                     </schemaDirectory>
                 </configuration>
             </plugin>

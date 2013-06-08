@@ -11,12 +11,12 @@ http://www.springframework.org/schema/oxm/spring-oxm-1.5.xsd http://www.springfr
 		class="org.springframework.xml.xsd.commons.CommonsXsdSchemaCollection">
 		<property name="xsds">
 			<list>
-				<value>/calculator/messages.xsd</value>
+				<value>/newsfeedservice/messages.xsd</value>
 			</list>
 		</property>
 		<property name="inline" value="true" />
 	</bean>
-	<bean id="calculatorService" class="nl.ead.webservice.CalculatorEndpoint">
+	<bean id="calculatorService" class="nl.ead.webservice.NewsfeedEndpoint">
 		<constructor-arg ref="marshaller" />
 		<constructor-arg ref="unmarshaller" />
 	</bean>
