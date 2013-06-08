@@ -24,47 +24,33 @@ public class NewsfeedEndpoint {
     @SuppressWarnings({"unchecked", "deprecation"})
     @PayloadRoot(localPart = "NFRequest", namespace = "http://www.han.nl/schemas/messages")
     public NFResponse generateNewsfeed(NFRequest req) {
-        // a sequence of a minimum of 1 and unbounded max is generated as a
-        // List<>
-        List<Integer> paramList = req.getInput().getParamlist().getParam();
-        CalculateOperation op = req.getInput().getOperation();
-        int retValue = paramList.get(0);
-
-        for (int i = 1; i < paramList.size(); i++) {
-            // CalculateOperation is generated as an enum
-            if (op.equals(CalculateOperation.ADD)) {
-                retValue += paramList.get(i).intValue();
-            } else if (op.equals(CalculateOperation.SUBTRACT)) {
-                retValue -= paramList.get(i).intValue();
-            } else if (op.equals(CalculateOperation.MULTIPLY)) {
-                retValue *= paramList.get(i).intValue();
-            } else if (op.equals(CalculateOperation.DIVIDE)) {
-                retValue /= paramList.get(i).intValue();
-            }
-        }
+        // GET THE INPUT FROM THE REQUEST
+        Input requested_input = req.getInput();
+        String requested_name = requested_input.getName();
 
         ServiceCaller svc = new ServiceCaller();
         InterestParser inp = new InterestParser();
         ArrayList<String> facebook_response;
         ArrayList<Interest> parsed_interests;
+        ArrayList<Interest> offline_test_interests = new ArrayList<Interest>();
+        offline_test_interests.add(new Interest("Computers"));
+        offline_test_interests.add(new Interest("Games"));
 
-        facebook_response = svc.connectToFacebook("robbertploeg");
+        // SEARCH ON FACEBOOK FOR INTERESTS WITH THAT PARTICULAR NAME
+        facebook_response = svc.connectToFacebook(requested_name);
         parsed_interests = inp.processInterests(facebook_response);
         for (Interest ist : parsed_interests) {
             System.out.print(ist.getName() + ", ");
         }
 
-        ArrayList<Interest> offline_test_interests = new ArrayList<Interest>();
-        offline_test_interests.add(new Interest("Computers"));
-        offline_test_interests.add(new Interest("Games"));
 
-        // use the offline interest_list if access token is no longer valid. will be fixed.
+        // SEARCH ON THE ARTICLE API FOR ARTICLES MATCHING THE INTERESTS
         String harro = svc.connectToArticleAPI(offline_test_interests);
         System.out.println(harro);
 
-        CalculateResult result = new CalculateResult();
-        result.setMessage("Response Sent");
-        result.setValue(retValue);
+        // PUT THE RESULTS IN THE RESPONSE MESSAGE
+        Result result = new Result();
+        result.setMessage("Searched for: " + requested_name);
         NFResponse resp = new NFResponse();
         resp.setResult(result);
         return resp;

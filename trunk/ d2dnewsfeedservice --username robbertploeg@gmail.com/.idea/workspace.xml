@@ -2,28 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\src\main\webapp\calculator\types.xsd" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Calculator_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Calculator_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/NFRequest.java" afterPath="$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/NFRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/NFResponse.java" afterPath="$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/NFResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java" afterPath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/ObjectFactory.java" afterPath="$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/ObjectFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java" afterPath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-ws-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-ws-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/newsfeedservice/messages.xsd" afterPath="$PROJECT_DIR$/src/main/webapp/newsfeedservice/messages.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/package-info.java" afterPath="$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/package-info.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/newsfeedservice/types.xsd" afterPath="$PROJECT_DIR$/src/main/webapp/newsfeedservice/types.xsd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\src\main\java\nl\ead\webservice\CalculatorEndpoint.java" afterPath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java" />
-      <change type="MOVED" beforePath="D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\src\main\webapp\calculator\messages.xsd" afterPath="$PROJECT_DIR$/src/main/webapp/newsfeedservice/messages.xsd" />
-      <change type="MOVED" beforePath="D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\target\generated-sources\xjc\nl\ead\webservice\CalculateRequest.java" afterPath="$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/NFRequest.java" />
-      <change type="MOVED" beforePath="D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\target\generated-sources\xjc\nl\ead\webservice\CalculateResponse.java" afterPath="$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/NFResponse.java" />
-      <change type="MOVED" beforePath="D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\src\main\webapp\calculator" afterPath="$PROJECT_DIR$/src/main/webapp/newsfeedservice" />
+      <change type="MOVED" beforePath="D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\Calculator.iml" afterPath="$PROJECT_DIR$/NFS.iml" />
     </list>
     <ignored path="Calculator.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/ArticleParser.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370437547234" ignored="false" />
-    <file path="/Dummy.txt" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370712514729" ignored="false" />
+    <file path="/Dummy.txt" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370712543000" ignored="false" />
     <file path="/ServiceCaller.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370711918067" ignored="false" />
     <file path="/CalculatorEndpoint.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370440650187" ignored="false" />
     <file path="/InterestParser.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370444295237" ignored="false" />
-    <file path="/messages.xsd" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370712330744" ignored="false" />
+    <file path="/messages.xsd" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370713276956" ignored="false" />
     <file path="/spring-ws-servlet.xml" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370712532600" ignored="false" />
+    <file path="/types.xsd" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370713263897" ignored="false" />
+    <file path="/NewsfeedEndpoint.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370714042826" ignored="false" />
+    <file path="/NFRequest.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370713362935" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,28 +86,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NewsfeedEndpoint.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="NewsfeedEndpoint.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="8" selection-start="1200" selection-end="1200" vertical-scroll-proportion="-264.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring-ws-servlet.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-ws-servlet.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="23" selection-start="969" selection-end="969" vertical-scroll-proportion="0.33333334">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServiceCaller.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="17" selection-start="1906" selection-end="1906" vertical-scroll-proportion="0.0">
+            <state line="54" column="37" selection-start="2194" selection-end="2194" vertical-scroll-proportion="1.1418313">
               <folding />
             </state>
           </provider>
@@ -129,9 +113,12 @@
         <option value="$PROJECT_DIR$/src/main/java/nl/ead/webservice/CalculatorEndpoint.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/calculator/messages.xsd" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-ws-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/newsfeedservice/types.xsd" />
+        <option value="$PROJECT_DIR$/src/main/webapp/newsfeedservice/messages.xsd" />
+        <option value="$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/NFRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java" />
       </list>
     </option>
   </component>
@@ -412,7 +399,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
@@ -846,7 +833,11 @@
       <created>1370514627121</created>
       <updated>1370514627121</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Refactored ALLES&#10;">
+      <created>1370712564116</created>
+      <updated>1370712564116</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -865,15 +856,15 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32876712" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49769586" sideWeight="0.71843004" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49657536" sideWeight="0.71843004" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5308219" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46917808" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -973,11 +964,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="30" selection-start="654" selection-end="654" vertical-scroll-proportion="0.63243246" />
@@ -1026,35 +1012,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="17" selection-start="1906" selection-end="1906" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/newsfeedservice/types.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.4028269">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/newsfeedservice/messages.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="29" selection-start="642" selection-end="642" vertical-scroll-proportion="0.6607774">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="8" selection-start="1200" selection-end="1200" vertical-scroll-proportion="-264.0">
+        <state line="52" column="17" selection-start="1906" selection-end="1906" vertical-scroll-proportion="3.0555556">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-ws-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="23" selection-start="969" selection-end="969" vertical-scroll-proportion="0.33333334">
+        <state line="6" column="69" selection-start="694" selection-end="694" vertical-scroll-proportion="0.41632652">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/newsfeedservice/types.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="416" selection-end="416" vertical-scroll-proportion="1.1024735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/newsfeedservice/messages.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="23" selection-start="793" selection-end="793" vertical-scroll-proportion="1.5583038">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/NFRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="26" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.795053">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="37" selection-start="2194" selection-end="2194" vertical-scroll-proportion="1.1418313">
           <folding />
         </state>
       </provider>
@@ -1065,7 +1058,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>Calculator:war</last-edited>
+          <last-edited>Calculator:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1114,7 +1107,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Calculator</last-edited>
+          <last-edited>NFS</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
