@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="result" type="{http://www.han.nl/schemas/types}CalculateResult"/>
+ *         &lt;element name="input" type="{http://www.han.nl/schemas/types}CalculateInput"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "result"
+    "input"
 })
-@XmlRootElement(name = "CalculateResponse", namespace = "http://www.han.nl/schemas/messages")
-public class CalculateResponse {
+@XmlRootElement(name = "NFRequest", namespace = "http://www.han.nl/schemas/messages")
+public class NFRequest {
 
     @XmlElement(namespace = "http://www.han.nl/schemas/messages", required = true)
-    protected CalculateResult result;
+    protected CalculateInput input;
 
     /**
-     * Gets the value of the result property.
+     * Gets the value of the input property.
      * 
      * @return
      *     possible object is
-     *     {@link CalculateResult }
+     *     {@link CalculateInput }
      *     
      */
-    public CalculateResult getResult() {
-        return result;
+    public CalculateInput getInput() {
+        return input;
     }
 
     /**
-     * Sets the value of the result property.
+     * Sets the value of the input property.
      * 
      * @param value
      *     allowed object is
-     *     {@link CalculateResult }
+     *     {@link CalculateInput }
      *     
      */
-    public void setResult(CalculateResult value) {
-        this.result = value;
+    public void setInput(CalculateInput value) {
+        this.input = value;
     }
 
 }

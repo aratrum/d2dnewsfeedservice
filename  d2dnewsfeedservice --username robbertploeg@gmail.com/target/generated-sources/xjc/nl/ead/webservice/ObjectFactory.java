@@ -53,19 +53,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CalculateRequest }
+     * Create an instance of {@link NFRequest }
      * 
      */
-    public CalculateRequest createCalculateRequest() {
-        return new CalculateRequest();
+    public NFRequest createCalculateRequest() {
+        return new NFRequest();
     }
 
     /**
-     * Create an instance of {@link CalculateResponse }
+     * Create an instance of {@link NFResponse }
      * 
      */
-    public CalculateResponse createCalculateResponse() {
-        return new CalculateResponse();
+    public NFResponse createCalculateResponse() {
+        return new NFResponse();
     }
 
     /**

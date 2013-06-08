@@ -12,18 +12,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Endpoint
-public class CalculatorEndpoint {
+public class NewsfeedEndpoint {
     private Marshaller marshaller;
     private Unmarshaller unmarshaller;
 
-    public CalculatorEndpoint(Marshaller marshaller, Unmarshaller unmarshaller) {
+    public NewsfeedEndpoint(Marshaller marshaller, Unmarshaller unmarshaller) {
         this.marshaller = marshaller;
         this.unmarshaller = unmarshaller;
     }
 
     @SuppressWarnings({"unchecked", "deprecation"})
-    @PayloadRoot(localPart = "CalculateRequest", namespace = "http://www.han.nl/schemas/messages")
-    public CalculateResponse calculateSumForName(CalculateRequest req) {
+    @PayloadRoot(localPart = "NFRequest", namespace = "http://www.han.nl/schemas/messages")
+    public NFResponse generateNewsfeed(NFRequest req) {
         // a sequence of a minimum of 1 and unbounded max is generated as a
         // List<>
         List<Integer> paramList = req.getInput().getParamlist().getParam();
@@ -65,7 +65,7 @@ public class CalculatorEndpoint {
         CalculateResult result = new CalculateResult();
         result.setMessage("Response Sent");
         result.setValue(retValue);
-        CalculateResponse resp = new CalculateResponse();
+        NFResponse resp = new NFResponse();
         resp.setResult(result);
         return resp;
     }
