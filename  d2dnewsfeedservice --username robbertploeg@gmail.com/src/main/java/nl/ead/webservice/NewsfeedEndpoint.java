@@ -8,6 +8,7 @@ import org.springframework.oxm.Unmarshaller;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 @SuppressWarnings({"unchecked", "deprecation", "unused"})
@@ -45,7 +46,11 @@ public class NewsfeedEndpoint {
 
 
         // SEARCH ON THE ARTICLE API FOR ARTICLES MATCHING THE INTERESTS
-        String harro = svc.connectToArticleAPI(offline_test_interests);
+        try {
+            String harro = svc.connectToArticleAPI(offline_test_interests);
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
         //System.out.println(harro);
 
         // PUT THE RESULTS IN THE RESPONSE MESSAGE

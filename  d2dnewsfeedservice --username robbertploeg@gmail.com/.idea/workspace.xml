@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/Input.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/Result.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_7_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/NFS_war.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/NFS_war_exploded.xml" />
+      <change type="DELETED" beforePath="D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\.idea\libraries\Maven__commons_lang_commons_lang_2_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\.idea\libraries\Maven__org_jsoup_jsoup_0_2_2.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NFS.iml" afterPath="$PROJECT_DIR$/NFS.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java" afterPath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java" afterPath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Calculator.iws" />
@@ -79,13 +86,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NewsfeedEndpoint.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="NewsfeedEndpoint.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="17" selection-start="1904" selection-end="1904" vertical-scroll-proportion="0.56682026">
+            <state line="41" column="39" selection-start="1701" selection-end="1701" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceCaller.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="117" column="40" selection-start="4863" selection-end="4863" vertical-scroll-proportion="0.847981">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="144" column="45" selection-start="5236" selection-end="5236" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,16 +131,16 @@
         <option value="$PROJECT_DIR$/src/main/java/nl/ead/webservice/entity/Interest.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/ead/webservice/core/InterestParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/ead/webservice/CalculatorEndpoint.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/calculator/messages.xsd" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-ws-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/newsfeedservice/types.xsd" />
         <option value="$PROJECT_DIR$/src/main/webapp/newsfeedservice/messages.xsd" />
         <option value="$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/NFRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java" />
         <option value="$PROJECT_DIR$/target/calculator/calculator/messages.xsd" />
         <option value="$PROJECT_DIR$/target/calculator/calculator/types.xsd" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java" />
       </list>
     </option>
   </component>
@@ -205,64 +230,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="D2DNewsfeedservice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Calculator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="D2DNewsfeedservice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Calculator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="D2DNewsfeedservice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated-sources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xjc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webservice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Calculator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="D2DNewsfeedservice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated-sources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -738,7 +705,7 @@
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/calculator/calculatorservice.wdsl" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="Calculator:war exploded">
+        <artifact name="NFS:war exploded">
           <settings DEPLOYMENT_METHOD="contexts" />
         </artifact>
       </deployment>
@@ -866,7 +833,7 @@
       </ConfigurationWrapper>
       <method>
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="Calculator:war exploded" />
+          <artifact name="NFS:war exploded" />
         </option>
       </method>
     </configuration>
@@ -1006,7 +973,11 @@
       <created>1370714521108</created>
       <updated>1370714521108</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added the maven sources&#10;&#10;">
+      <created>1370791978107</created>
+      <updated>1370791978107</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1162,11 +1133,6 @@
         <state line="36" column="60" selection-start="964" selection-end="964" vertical-scroll-proportion="0.58343196" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="0" selection-start="5232" selection-end="5232" vertical-scroll-proportion="0.9396092" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/NFRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="26" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.795053">
@@ -1177,13 +1143,6 @@
     <entry file="file://$PROJECT_DIR$/target/generated-sources/xjc/nl/ead/webservice/Result.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="56" selection-start="1707" selection-end="1707" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="29" selection-start="4310" selection-end="4310" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1223,12 +1182,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="144" column="45" selection-start="5236" selection-end="5236" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="17" selection-start="1904" selection-end="1904" vertical-scroll-proportion="0.56682026">
+        <state line="41" column="39" selection-start="1701" selection-end="1701" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="40" selection-start="4863" selection-end="4863" vertical-scroll-proportion="0.847981">
+          <folding />
         </state>
       </provider>
     </entry>
