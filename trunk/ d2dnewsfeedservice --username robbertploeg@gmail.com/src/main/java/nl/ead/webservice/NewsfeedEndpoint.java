@@ -26,6 +26,7 @@ public class NewsfeedEndpoint {
         // GET THE INPUT FROM THE REQUEST
         Input requested_input = req.getInput();
         String requested_name = requested_input.getName();
+        System.out.println(requested_name);
 
         ServiceCaller svc = new ServiceCaller();
         InterestParser inp = new InterestParser();
