@@ -12,6 +12,8 @@ import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.methods.GetMethod;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,7 +26,7 @@ import java.util.List;
  * Time: 11:25
  */
 public class ServiceCaller {
-    String ACCESS_TOKEN = "CAACEdEose0cBAAlXhnxkBRZAStZCRlqVR7X9Oyj3QadmgSaPsXpZCcAR9VMlTESKKZBvQikzIb5dHWSfW60ZBNljZADThRWpu0J5tLCAZAk13x8f5l6TCAxeZAHqrUrQuqSO1MOf7yCsg6BEfAwPACALwex4BATE0f8ZD";
+    String ACCESS_TOKEN = "CAACEdEose0cBALwdj2FQs0lptBQ5UyZCL3lfD11Ace3oQwcAvmjSXb6fAzHzjQdgMuDvI8NxgZCdbwGnAzuZBZASCblcDSy0J1VycmuJsSn1xcXzDvP0LXp7FZBZBZB4Fm9wAkxV3r6JmrBuHtkXLfQvijQtb4iEDMZD";
 
     public ServiceCaller() {
 
@@ -65,51 +67,56 @@ public class ServiceCaller {
         return null;
     }
 
-    public String connectToArticleAPI(ArrayList<Interest> interest) {
+    public String connectToArticleAPI(ArrayList<Interest> interest) throws IOException {
         System.out.println("(--- ARTICLE API CALL ---)");
-        /*for(int i = 0; i < interest.size(); i++)
-        {
-            Interest item = interest.get(i);
-            System.out.println("Item " + i + " : " + item.getName());
-        }*/
         String generic_error = "";
         // String response =""; //ARTICLEAPI_URL;
         String getArticleUrl = "http://www.diffbot.com/api/article?token=344e65eee509748803505554ac1615fe&url=";
         String article_url = "";
-        String beginningSearchString = "http://nos.nl/zoeken/?s=";
-        String endSearchString = "";
-
-        Interest item = interest.get(0);
+        String beginningSearchString = "http://www.nu.nl/zoeken/?q=";
         HttpClient client = new HttpClient();
-        HttpMethod method = new GetMethod(beginningSearchString + item.getName() + endSearchString);
-
-        try {
-            client.executeMethod(method);
-
-            if (method.getStatusCode() == HttpStatus.SC_OK) {
-                String response = method.getResponseBodyAsString();
-                //JSONObject test = new JSONObject(response);
-                System.out.println(response);
-                System.out.println("GET Success: OK");
-                //System.out.println("Article getter replied with: " + response);
-                return response;
-            } else if (method.getStatusCode() == HttpStatus.SC_BAD_REQUEST) {
-                generic_error = method.getResponseBodyAsString();
-                System.out.println("GET Error: BAD REQUEST, Server Response: \n" + generic_error);
-                return null;
+        int z = 0;
+        System.out.println(interest.size());
+        for(int j = 0; j < interest.size(); j++)
+        {
+            Interest item = interest.get(j);
+            String url = beginningSearchString + item.getName();
+            System.out.println(url);
+            Document doc = Jsoup.connect(url).get();
+            //Elements newsHeadlines = doc.select("#searchlist .subarticle .caption h2 a");
+            //for(Element src : newsHeadlines)
+            {
+                //  if(z == 3)
+                {
+                    //     z = 0;
+                    //    break;
+                }
+                HttpMethod method = new GetMethod(getArticleUrl);
+                // z++;
+                try {
+                    client.executeMethod(method);
+                    if (method.getStatusCode() == HttpStatus.SC_OK) {
+                        String response = method.getResponseBodyAsString();
+                        JSONObject test = new JSONObject(response);
+                        //System.out.println("GET Success: OK");
+                        //System.out.println("Article getter replied with: " + response);
+                        //return response;
+                    } else if (method.getStatusCode() == HttpStatus.SC_BAD_REQUEST) {
+                        generic_error = method.getResponseBodyAsString();
+                        System.out.println("GET Error: BAD REQUEST, Server Response: \n" + generic_error);
+                        //return null;
+                    }
+                    generic_error = method.getResponseBodyAsString();
+                } catch (IOException e) {
+                    return "IOException.";
+                } catch (JSONException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
+                finally {
+                    method.releaseConnection();
+                }
             }
-            generic_error = method.getResponseBodyAsString();
-
-        } catch (IOException e) {
-            return "IOException.";
-        } //catch (JSONException e) {
-           // e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        //}
-    finally {
-            method.releaseConnection();
         }
-
-
         return "GET Request Failed, Server Response: \n" + generic_error;
     }
 }
