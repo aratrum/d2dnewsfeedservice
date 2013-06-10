@@ -4,6 +4,7 @@ import nl.ead.webservice.core.ArticleParser;
 import nl.ead.webservice.core.InterestParser;
 import nl.ead.webservice.entity.Article;
 import nl.ead.webservice.entity.Interest;
+import nl.ead.webservice.presentation.ArticlePrinter;
 import nl.ead.webservice.service.ServiceCaller;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -52,10 +53,13 @@ public class NewsfeedEndpoint {
         // SEARCH ON THE ARTICLE API FOR ARTICLES MATCHING THE INTERESTS
         try {
             ArticleParser arp = new ArticleParser();
+            ArticlePrinter ap = new ArticlePrinter();
             ArrayList<Article> parsed_Articles;
             String result = svc.connectToArticleAPI(offline_test_interests);
-            //parsed_Articles = arp.processArticles(result, (parsed_interests.size() * 3));
-            parsed_Articles = arp.processArticles(result, (offline_test_interests.size() * 3));
+            //parsed_Articles = arp.processArticles(result, (parsed_interests.size()));
+            parsed_Articles = arp.processArticles(result, (offline_test_interests.size()));
+            ap.printArticles(parsed_Articles);
+
             System.out.print("Done");
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.

@@ -91,15 +91,12 @@ public class ServiceCaller {
             Elements newsHeadlines = doc.select("#searchlist .subarticle .caption h2 a");
             for(Element src : newsHeadlines)
             {
-                if(z == 3)
+                if(z == 1)
                 {
                     z = 0;
                     break;
                 }
                 z++;
-                System.out.println("----href----");
-                System.out.println(src.attr("href"));
-                System.out.println("----href----");
                 HttpMethod method = new GetMethod(getArticleUrl + src.attr("href"));
 
                 try {
