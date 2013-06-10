@@ -6,7 +6,6 @@ import nl.ead.webservice.entity.Article;
 import nl.ead.webservice.entity.Interest;
 import nl.ead.webservice.presentation.ArticlePrinter;
 import nl.ead.webservice.service.ServiceCaller;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.springframework.oxm.Marshaller;
 import org.springframework.oxm.Unmarshaller;
@@ -15,6 +14,7 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 
 @SuppressWarnings({"unchecked", "deprecation", "unused"})
 @Endpoint
@@ -34,6 +34,7 @@ public class NewsfeedEndpoint {
         String requested_name = requested_input.getName();
         System.out.println(requested_name);
 
+        Random rnd = new Random();
         ServiceCaller svc = new ServiceCaller();
         InterestParser inp = new InterestParser();
         ArrayList<String> facebook_response;
@@ -49,29 +50,61 @@ public class NewsfeedEndpoint {
             System.out.print(ist.getName() + ", ");
         }
 
+        System.out.println("");
 
-        // SEARCH ON THE ARTICLE API FOR ARTICLES MATCHING THE INTERESTS
-        try {
-            ArticleParser arp = new ArticleParser();
-            ArticlePrinter ap = new ArticlePrinter();
-            ArrayList<Article> parsed_Articles;
-            String result = svc.connectToArticleAPI(offline_test_interests);
-            parsed_Articles = arp.processArticles(result, (parsed_interests.size()));
-            //parsed_Articles = arp.processArticles(result, (offline_test_interests.size()));
-            ap.printArticles(parsed_Articles);
+        ArrayList<Interest> short_interest_list = new ArrayList<Interest>();
+        int old_n[] = {0,0,0};
+        int n = 0;
+        for (int i = 0; i < 3; i++) {
+            n = rnd.nextInt(parsed_interests.size());
 
-            System.out.print("Done");
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (JSONException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            for (int j = 0; j < old_n.length; j++) {
+                if (n == old_n[j]) {
+                    n = rnd.nextInt(parsed_interests.size());
+                    j = 0;
+                }
+            }
+            short_interest_list.add(parsed_interests.get(n));
         }
 
-        // PUT THE RESULTS IN THE RESPONSE MESSAGE
-        Result result = new Result();
-        result.setMessage("Searched for: " + requested_name);
-        NFResponse resp = new NFResponse();
-        resp.setResult(result);
-        return resp;
+
+
+    // SEARCH ON THE ARTICLE API FOR ARTICLES MATCHING THE INTERESTS
+    try
+
+    {
+        ArticleParser arp = new ArticleParser();
+        ArticlePrinter ap = new ArticlePrinter();
+        ArrayList<Article> parsed_Articles;
+        String result = svc.connectToArticleAPI(short_interest_list);
+        parsed_Articles = arp.processArticles(result, (short_interest_list.size()));
+        //parsed_Articles = arp.processArticles(result, (offline_test_interests.size()));
+        ap.printArticles(parsed_Articles);
+
+        System.out.print("Done");
     }
+
+    catch(
+    IOException e
+    )
+
+    {
+        e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+    }
+
+    catch(
+    JSONException e
+    )
+
+    {
+        e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+    }
+
+    // PUT THE RESULTS IN THE RESPONSE MESSAGE
+    Result result = new Result();
+    result.setMessage("Searched for: "+requested_name);
+    NFResponse resp = new NFResponse();
+    resp.setResult(result);
+    return resp;
+}
 }

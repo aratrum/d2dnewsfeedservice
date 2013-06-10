@@ -36,6 +36,7 @@ public class ServiceCaller {
     }
 
     public ArrayList<String> connectToFacebook(String username) {
+        System.out.println("Searching for interests...");
         ArrayList<String> interests;
         FacebookClient client = new DefaultFacebookClient(ACCESS_TOKEN);
 
@@ -71,28 +72,21 @@ public class ServiceCaller {
     }
 
     public String connectToArticleAPI(ArrayList<Interest> interest) throws IOException {
+        System.out.println("Searching for articles...");
         JSONArray result = new JSONArray();
-
-        System.out.println("(--- ARTICLE API CALL ---)");
         String generic_error = "";
-        // String response =""; //ARTICLEAPI_URL;
         String getArticleUrl = "http://www.diffbot.com/api/article?token=344e65eee509748803505554ac1615fe&url=";
-        String article_url = "";
         String beginningSearchString = "http://www.nu.nl/zoeken/?q=";
         HttpClient client = new HttpClient();
         int z = 0;
-        System.out.println(interest.size());
-        for(int j = 0; j < interest.size(); j++)
-        {
+        for (int j = 0; j < interest.size(); j++) {
             Interest item = interest.get(j);
             String url = beginningSearchString + item.getName();
             System.out.println(url);
             Document doc = Jsoup.connect(url).get();
             Elements newsHeadlines = doc.select("#searchlist .subarticle .caption h2 a");
-            for(Element src : newsHeadlines)
-            {
-                if(z == 1)
-                {
+            for (Element src : newsHeadlines) {
+                if (z == 1) {
                     z = 0;
                     break;
                 }
