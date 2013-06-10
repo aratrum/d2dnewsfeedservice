@@ -53,7 +53,7 @@ public class NewsfeedEndpoint {
         System.out.println("");
 
         ArrayList<Interest> short_interest_list = new ArrayList<Interest>();
-        int old_n[] = {0,0,0};
+        int old_n[] = {-1,-1,-1};
         int n = 0;
         for (int i = 0; i < 3; i++) {
             n = rnd.nextInt(parsed_interests.size());
@@ -64,6 +64,7 @@ public class NewsfeedEndpoint {
                     j = 0;
                 }
             }
+            old_n[i] = n;
             short_interest_list.add(parsed_interests.get(n));
         }
 
