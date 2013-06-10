@@ -10,10 +10,13 @@ import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethod;
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.methods.GetMethod;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -68,6 +71,8 @@ public class ServiceCaller {
     }
 
     public String connectToArticleAPI(ArrayList<Interest> interest) throws IOException {
+        JSONArray result = new JSONArray();
+
         System.out.println("(--- ARTICLE API CALL ---)");
         String generic_error = "";
         // String response =""; //ARTICLEAPI_URL;
@@ -83,40 +88,39 @@ public class ServiceCaller {
             String url = beginningSearchString + item.getName();
             System.out.println(url);
             Document doc = Jsoup.connect(url).get();
-            //Elements newsHeadlines = doc.select("#searchlist .subarticle .caption h2 a");
-            //for(Element src : newsHeadlines)
+            Elements newsHeadlines = doc.select("#searchlist .subarticle .caption h2 a");
+            for(Element src : newsHeadlines)
             {
-                //  if(z == 3)
+                if(z == 3)
                 {
-                    //     z = 0;
-                    //    break;
+                    z = 0;
+                    break;
                 }
-                HttpMethod method = new GetMethod(getArticleUrl);
-                // z++;
+                z++;
+                System.out.println("----href----");
+                System.out.println(src.attr("href"));
+                System.out.println("----href----");
+                HttpMethod method = new GetMethod(getArticleUrl + src.attr("href"));
+
                 try {
                     client.executeMethod(method);
                     if (method.getStatusCode() == HttpStatus.SC_OK) {
                         String response = method.getResponseBodyAsString();
-                        JSONObject test = new JSONObject(response);
-                        //System.out.println("GET Success: OK");
-                        //System.out.println("Article getter replied with: " + response);
-                        //return response;
+                        result.put(response);
+
                     } else if (method.getStatusCode() == HttpStatus.SC_BAD_REQUEST) {
                         generic_error = method.getResponseBodyAsString();
                         System.out.println("GET Error: BAD REQUEST, Server Response: \n" + generic_error);
-                        //return null;
+                        return null;
                     }
                     generic_error = method.getResponseBodyAsString();
                 } catch (IOException e) {
                     return "IOException.";
-                } catch (JSONException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                }
-                finally {
+                } finally {
                     method.releaseConnection();
                 }
             }
         }
-        return "GET Request Failed, Server Response: \n" + generic_error;
+        return result.toString();
     }
 }

@@ -1,8 +1,12 @@
 package nl.ead.webservice;
 
+import nl.ead.webservice.core.ArticleParser;
 import nl.ead.webservice.core.InterestParser;
+import nl.ead.webservice.entity.Article;
 import nl.ead.webservice.entity.Interest;
 import nl.ead.webservice.service.ServiceCaller;
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.springframework.oxm.Marshaller;
 import org.springframework.oxm.Unmarshaller;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
@@ -38,20 +42,26 @@ public class NewsfeedEndpoint {
         offline_test_interests.add(new Interest("Games"));
 
         // SEARCH ON FACEBOOK FOR INTERESTS WITH THAT PARTICULAR NAME
-        facebook_response = svc.connectToFacebook(requested_name);
-        parsed_interests = inp.processInterests(facebook_response);
-        for (Interest ist : parsed_interests) {
-            System.out.print(ist.getName() + ", ");
-        }
+        //facebook_response = svc.connectToFacebook(requested_name);
+        //parsed_interests = inp.processInterests(facebook_response);
+        //for (Interest ist : parsed_interests) {
+        //    System.out.print(ist.getName() + ", ");
+        //}
 
 
         // SEARCH ON THE ARTICLE API FOR ARTICLES MATCHING THE INTERESTS
         try {
-            String harro = svc.connectToArticleAPI(offline_test_interests);
+            ArticleParser arp = new ArticleParser();
+            ArrayList<Article> parsed_Articles;
+            String result = svc.connectToArticleAPI(offline_test_interests);
+            //parsed_Articles = arp.processArticles(result, (parsed_interests.size() * 3));
+            parsed_Articles = arp.processArticles(result, (offline_test_interests.size() * 3));
+            System.out.print("Done");
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (JSONException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
-        //System.out.println(harro);
 
         // PUT THE RESULTS IN THE RESPONSE MESSAGE
         Result result = new Result();
