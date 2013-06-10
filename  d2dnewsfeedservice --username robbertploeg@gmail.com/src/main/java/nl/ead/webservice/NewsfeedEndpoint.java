@@ -43,11 +43,11 @@ public class NewsfeedEndpoint {
         offline_test_interests.add(new Interest("Games"));
 
         // SEARCH ON FACEBOOK FOR INTERESTS WITH THAT PARTICULAR NAME
-        //facebook_response = svc.connectToFacebook(requested_name);
-        //parsed_interests = inp.processInterests(facebook_response);
-        //for (Interest ist : parsed_interests) {
-        //    System.out.print(ist.getName() + ", ");
-        //}
+        facebook_response = svc.connectToFacebook(requested_name);
+        parsed_interests = inp.processInterests(facebook_response);
+        for (Interest ist : parsed_interests) {
+            System.out.print(ist.getName() + ", ");
+        }
 
 
         // SEARCH ON THE ARTICLE API FOR ARTICLES MATCHING THE INTERESTS
@@ -56,8 +56,8 @@ public class NewsfeedEndpoint {
             ArticlePrinter ap = new ArticlePrinter();
             ArrayList<Article> parsed_Articles;
             String result = svc.connectToArticleAPI(offline_test_interests);
-            //parsed_Articles = arp.processArticles(result, (parsed_interests.size()));
-            parsed_Articles = arp.processArticles(result, (offline_test_interests.size()));
+            parsed_Articles = arp.processArticles(result, (parsed_interests.size()));
+            //parsed_Articles = arp.processArticles(result, (offline_test_interests.size()));
             ap.printArticles(parsed_Articles);
 
             System.out.print("Done");
