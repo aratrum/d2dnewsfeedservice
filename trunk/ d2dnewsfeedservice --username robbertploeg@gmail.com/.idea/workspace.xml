@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_7_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/NFS_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/NFS_war_exploded.xml" />
-      <change type="DELETED" beforePath="D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\.idea\libraries\Maven__commons_lang_commons_lang_2_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\.idea\libraries\Maven__org_jsoup_jsoup_0_2_2.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NFS.iml" afterPath="$PROJECT_DIR$/NFS.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java" afterPath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java" afterPath="$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Calculator.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/ArticleParser.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370437547234" ignored="false" />
-    <file path="/Dummy.txt" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370791963841" ignored="false" />
+    <file path="/Dummy.txt" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370792676421" ignored="false" />
     <file path="/ServiceCaller.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370711918067" ignored="false" />
     <file path="/CalculatorEndpoint.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370440650187" ignored="false" />
     <file path="/InterestParser.java" changelist="d6c00e39-f7a5-4e80-89c9-4bba8d678d99" time="1370444295237" ignored="false" />
@@ -86,21 +78,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NewsfeedEndpoint.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="NewsfeedEndpoint.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="39" selection-start="1701" selection-end="1701" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="60" column="47" selection-start="2585" selection-end="2586" vertical-scroll-proportion="0.6233062">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServiceCaller.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ServiceCaller.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="40" selection-start="4863" selection-end="4863" vertical-scroll-proportion="0.847981">
+            <state line="96" column="29" selection-start="3620" selection-end="3620" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -182,8 +172,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-5" />
     <option name="y" value="35" />
-    <option name="width" value="1690" />
-    <option name="height" value="1020" />
+    <option name="width" value="1376" />
+    <option name="height" value="738" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -413,7 +403,7 @@
     <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="appearance" />
+    <property name="options.lastSelected" value="preferences.applicationServers" />
     <property name="last_opened_file_path" value="D:/Spring/NewsfeedService" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -422,9 +412,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RestoreUpdateTree">
     <UpdateInfo date="Moments ago" ActionInfo="_Update">
@@ -441,6 +431,7 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="UPDATED" />
+            <PATH vcs="svn" revision="28">D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\src\main\java\nl\ead\webservice\core\ArticleParser.java</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Created" />
@@ -462,14 +453,6 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="RESTORED" />
-            <PATH vcs="svn" revision="24">D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\target\calculator\WEB-INF\classes\nl\ead\webservice\CalculateRequest.class</PATH>
-            <PATH vcs="svn" revision="24">D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\target\calculator\WEB-INF\classes\nl\ead\webservice\CalculateResponse.class</PATH>
-            <PATH vcs="svn" revision="24">D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\target\calculator\WEB-INF\classes\nl\ead\webservice\CalculatorEndpoint.class</PATH>
-            <PATH vcs="svn" revision="24">D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\target\calculator\calculator\messages.xsd</PATH>
-            <PATH vcs="svn" revision="24">D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\target\calculator\calculator\types.xsd</PATH>
-            <PATH vcs="svn" revision="24">D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\target\classes\nl\ead\webservice\CalculateRequest.class</PATH>
-            <PATH vcs="svn" revision="24">D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\target\classes\nl\ead\webservice\CalculateResponse.class</PATH>
-            <PATH vcs="svn" revision="24">D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\target\classes\nl\ead\webservice\CalculatorEndpoint.class</PATH>
           </FILE-GROUP>
         </FILE-GROUP>
         <FILE-GROUP>
@@ -513,6 +496,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="MERGED" />
+          <PATH vcs="svn" revision="28">D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\src\main\java\nl\ead\webservice\service\ServiceCaller.java</PATH>
+          <PATH vcs="svn" revision="28">D:\School\Minor AP\Advanced Software Engineering\D2DNewsfeedservice\src\main\java\nl\ead\webservice\NewsfeedEndpoint.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Not in repository" />
@@ -582,6 +567,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -610,17 +608,19 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JettyConfiguration" factoryName="Local">
@@ -639,21 +639,6 @@
       </server-settings>
       <predefined_log_file id="Jetty" enabled="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -677,6 +662,17 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
       <option name="LOCAL" value="false" />
       <deployment />
@@ -687,17 +683,6 @@
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="false" name="Jetty 7.6.8.v20121106" type="JettyConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Jetty 7.6.8.v20121106">
@@ -977,11 +962,15 @@
       <created>1370791978107</created>
       <updated>1370791978107</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added the maven sources for jsoup and made it compilable&#10;">
+      <created>1370792691109</created>
+      <updated>1370792691109</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="35" width="1690" height="1020" extended-state="6" />
+    <frame x="-5" y="35" width="1376" height="738" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -994,7 +983,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32718894" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32423207" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328341" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1003,8 +992,8 @@
       <window_info id="Maven Projects" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49657536" sideWeight="0.71843004" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24908201" sideWeight="0.531106" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.468894" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24848485" sideWeight="0.6757679" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6262799" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1054,7 +1043,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the maven sources&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the maven sources for jsoup and made it compilable&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1083,6 +1072,7 @@
     <MESSAGE value="Refactored XML, SOAP en endpoint!&#10;" />
     <MESSAGE value="removed a few warnings//&#10;" />
     <MESSAGE value="added the maven sources&#10;&#10;" />
+    <MESSAGE value="added the maven sources for jsoup and made it compilable&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1093,13 +1083,13 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
       </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
@@ -1149,16 +1139,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/target/calculator/calculator/messages.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="9" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="24" column="9" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/calculator/calculator/types.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="22" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="32" column="22" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-ws-servlet.xml">
@@ -1189,18 +1175,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="39" selection-start="1701" selection-end="1701" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="96" column="29" selection-start="3620" selection-end="3620" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/service/ServiceCaller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/ead/webservice/NewsfeedEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="40" selection-start="4863" selection-end="4863" vertical-scroll-proportion="0.847981">
+        <state line="60" column="47" selection-start="2585" selection-end="2586" vertical-scroll-proportion="0.6233062">
           <folding />
         </state>
       </provider>
